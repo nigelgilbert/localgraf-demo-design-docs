@@ -16,7 +16,7 @@
 - Designs & markup will change
 
 ## Demo Implications
-"Recent Events" widget is unaffected (static fetch recent query doesn't rely on resolver).
+"Recent Events" widget is unaffected (static "fetch recent" query doesn't rely on resolver).
 
 Event Pages will be _probably_ be generated with Resolvers in production (e.g. an Arc Template housing our React components + a Content Source that queries LocalGraf for an Event).  **We won't know how to implement Resolvers until Arc training.**
 
