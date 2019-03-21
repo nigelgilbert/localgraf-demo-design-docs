@@ -2,12 +2,12 @@
 
 ## Objective
 - Implement a "recent events" page and an "event" page to demo Arc + LocalGraph
-- Build something as production ready as possible to scout future integrations & Arc development
+- Build something as production ready as possible to scout Arc development & future integrations
 
 ## Context
 - **[Content Sources](https://dmn.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-content-source.md)** are JS modules that fetch data from outside Arc
 - **Templates** are Arc Pages with no Content Sources
-- **[Resolvers]()** map a user-facing Arc URI to **1)** a Fusion Template and **2)** a Content Source (which fetches data using params in the URI)
+- **Resolvers** map a user-facing Arc URI to **1)** a Fusion Template and **2)** a Content Source (which fetches data using params in the URI)
     - see locally @ http://localhost/pf/admin/app/tools/resolver-configs.html
 
 ## Challenges
@@ -22,4 +22,19 @@ Event Pages will be _probably_ be generated with Resolvers in production (e.g. a
 
 We can't make an event and imediately go to `/demo/event/<id>` to see it.  To demo a new event we have to create a new Page in PageBuilder Page using a Custom Field and specifying an `event_id` [in this PageBuilder menu.]()
 
-## Design Proposal
+## Demo Proposal
+1. Add event in Arc admin
+2. Show the "Recent Events"
+3. Create a new Arc Page
+    - select Event by `event_id` in PageBuilder
+    - refresh
+    - new Event Page will now be rendered
+
+## Implementation Notes
+- If we implement a LocalGraf Content Source that works in the PageBuilder GUI drag-n-drop, then it'll be trivial to plug into a Resolver later
+- data fetching / error handling will occur in a parent container component
+- markup / designs will go in pure functional child components
+    - max code reuse (markup is separated from logic and can be swapped out later)
+
+## Other Notes
+- I am following up on Arc forums for Resolver documentation
