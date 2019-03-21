@@ -20,7 +20,10 @@
 
 Event Pages will be _probably_ be generated with Resolvers in production (e.g. an Arc Template housing our React components + a Content Source that queries LocalGraf for an Event).  **We won't know how to implement Resolvers until Arc training.**
 
-We can't make an event and imediately go to `/demo/event/<id>` to see it.  To demo a new event we have to create a new Page in PageBuilder Page using a Custom Field and specifying an `event_id` [in this PageBuilder menu.]()
+We can't make an event and imediately go to `/demo/event/<id>` to see it.  To demo a new event we have to create a new Page in PageBuilder Page using a Custom Field and specifying an `event_id` in this PageBuilder Page Editor menu:
+
+<img src="https://raw.githubusercontent.com/nigelgilbert/localgraf-demo-design-docs/master/images/Screen%20Shot%202019-03-20%20at%2011.16.15%20PM.png" width="200" />
+
 
 ## Demo Proposal
 1. Add event in Arc admin
@@ -35,6 +38,8 @@ We can't make an event and imediately go to `/demo/event/<id>` to see it.  To de
 - data fetching / error handling will occur in a parent container component
 - markup / designs will go in pure functional child components
     - max code reuse (markup is separated from logic and can be swapped out later)
+
+<img src="https://raw.githubusercontent.com/nigelgilbert/localgraf-demo-design-docs/master/images/component-diagram.png" width="600" />
 
 ## Other Notes
 - I am following up on Arc forums for Resolver documentation
