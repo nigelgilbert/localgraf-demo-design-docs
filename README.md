@@ -8,7 +8,8 @@
 - **[Content Sources](https://dmn.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-content-source.md)** are JS modules that fetch data from outside Arc
 - **Templates** are Arc Pages with no Content Sources
 - **Resolvers** map a user-facing Arc URI to **1)** a Fusion Template and **2)** a Content Source (which fetches data using params in the URI)
-    - see locally @ http://localhost/pf/admin/app/tools/resolver-configs.html
+    - see locally: http://localhost/pf/admin/app/tools/resolver-configs.html
+    - legacy documentation: https://arcpublishing.gitbooks.io/getting-up-and-running-with-arc/content/chapter1/pagebuilder/resolvers.html
 
 ## Challenges
 - Resolver API is opaque and [poorly documented](https://dmn.arcpublishing.com/alc/answers/464)
@@ -43,3 +44,4 @@ We can't make an event and imediately go to `/demo/event/<id>` to see it.  To de
 
 ## Other Notes
 - I am following up on Arc forums for Resolver documentation
+- legacy Arc docs: https://arcpublishing.gitbooks.io/getting-up-and-running-with-arc/content/
