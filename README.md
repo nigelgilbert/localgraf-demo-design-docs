@@ -1,4 +1,4 @@
-# LocalGraf + Arc - Demo Design Spec
+# LocalGraf + Arc Demo Design Spec
 
 ## Objective
 - Implement a "recent events" page and an "event" page to demo Arc + LocalGraph
